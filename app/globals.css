@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-primary: #6B9AC4;
+  --color-primary-dark: #5A85AB;
+  --color-secondary: #F5F0EB;
+  --color-accent: #D4856B;
+  --color-accent-dark: #C07558;
+  --color-text: #2D3436;
+  --color-bg: #FAFAF8;
+  --color-white: #FFFFFF;
+  --font-heading: var(--font-nunito);
+  --font-body: var(--font-dm-sans);
+  --animate-hero-logo: hero-logo 1s ease-out both;
+  --animate-fade-in-left: fade-in-left 0.8s ease-out both;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading), system-ui, sans-serif;
+}
+
+/* Hero logo: scale up + fade in + subtle float */
+@keyframes hero-logo {
+  0% {
+    opacity: 0;
+    transform: scale(0.7) rotate(-8deg);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.03) rotate(1deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+/* Text side: slide in from left */
+@keyframes fade-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
