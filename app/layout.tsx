@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Nunito, DM_Sans } from "next/font/google";
+import GoogleAnalytics from "./components/GoogleAnalytics";
 import "./globals.css";
 
 const nunito = Nunito({
@@ -35,6 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${nunito.variable} ${dmSans.variable} antialiased`}>
+        <GoogleAnalytics />
         {children}
       </body>
     </html>
